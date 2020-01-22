@@ -23,7 +23,7 @@ SAVE_TABLE(rFile, rTable);
 
 ...
 
-To write a row of data:
+To write a row of data: 
 
 ...
 
