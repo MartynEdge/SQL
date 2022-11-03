@@ -2,7 +2,7 @@
 
 # SQL
 
-Simplifies writing a SQL database.
+A wrapper for reading and writing to an SQL database, written in C.
 
 
 
@@ -11,15 +11,10 @@ data using only a few lines of code.
 
 
 
-To create a table:
+## Creating a table
 
 
-
-...
-
-
-
-//Declare the table variable.
+### Declare the table variable.
 
 struct SQL_TABLE *rTable;
 
@@ -27,7 +22,7 @@ rTable=NEW_TABLE("NewTable",3);
 
 
 
-//Table setup.
+### Table setup.
 
 ADD_COLUMN(rTable, "Column1", SQL_TYPE_INT);
 
@@ -37,7 +32,7 @@ ADD_COLUMN(rTable, "Column3", SQL_TYPE_FLOAT);
 
 	
 
-//Save the table
+### Save the table
 
 struct SQL_FILE *rFile=SQL_OPEN("DelthisDB.db");
 
@@ -45,19 +40,11 @@ SAVE_TABLE(rFile, rTable);
 
 
 
-...
+## Writing a row of data: 
 
 
 
-To write a row of data: 
-
-
-
-...
-
-
-
-//Declare the row variables.
+### Declare the row variables.
 
 struct SQL_ROW *rRow=NEW_ROW();
 
@@ -69,7 +56,7 @@ float Value_float;
 
 	
 
-//Assign the row values.
+### Assign the row values.
 
 Value_int=150;
 
@@ -87,11 +74,7 @@ SAVE_ROW(rFile, rTable, rRow);
 
 
 
-...
-
-
-
-Here is a sample console output:
+## Sample console output:
 
 
 
