@@ -2,7 +2,7 @@
 
 # SQL
 
-A wrapper for reading and writing to an SQL database, written in C.
+A wrapper for writing to a SQL database, written in C.
 
 
 
